@@ -21,6 +21,16 @@ function Profile() {
         return rtf.format(daysDifference, 'day');
     }
 
+    function compare( a, b ) {
+        if ( a.stargazers_count > b.stargazers_count ){
+          return -1;
+        }
+        if ( a.stargazers_count < b.stargazers_count ){
+          return 1;
+        }
+        return 0;
+      }
+
     const openInNewTab = (url) => {
         url.indexOf("http") == -1 ?
         window.open("https://" + url, '_blank').focus() :
@@ -31,7 +41,8 @@ function Profile() {
         axios
         .get('https://api.github.com/users/' + state.login + '/repos')
         .then((response) => {
-          setRepositories(response.data);
+            const orderArray = response.data.sort(compare);
+            setRepositories(orderArray);
         })
         .catch((err) => {
           console.log(err);
