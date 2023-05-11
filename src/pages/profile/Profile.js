@@ -91,7 +91,7 @@ function Profile() {
                 { repositories.map(function(item) {
                     return <div className="card">
                     <div className="card-body">
-                        <h5 className="card-title">{item?.name}</h5>
+                        <a href={item?.html_url}><h5 className="card-title">{item?.name}</h5></a>
                         <p className="card-text text-muted">{item?.description}</p>
                         <p className="card-text timed text-muted"><i class="bi bi-star"> </i>{item?.stargazers_count} • atualizado {getRelativeTime(new Date(item?.updated_at.split("T")[0]).getTime())}</p>
                     </div>
