@@ -62,3 +62,7 @@
 .profile .timed {
     font-size: 14px;
 }
+
+.profile .site {
+    cursor: pointer;
+}

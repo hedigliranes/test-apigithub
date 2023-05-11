@@ -21,6 +21,12 @@ function Profile() {
         return rtf.format(daysDifference, 'day');
     }
 
+    const openInNewTab = (url) => {
+        url.indexOf("http") == -1 ?
+        window.open("https://" + url, '_blank').focus() :
+        window.open(url, '_blank').focus();
+    }
+
     useLayoutEffect(() => {
         axios
         .get('https://api.github.com/users/' + state.login + '/repos')
@@ -67,9 +73,9 @@ function Profile() {
                         <p className="card-text">{state.bio}</p>
                         <div className='follows'>
                             <p className="list-group-item m-0"><i className="bi bi-people">
-                                </i> {state.followers} Seguidores</p>
+                                </i> {state?.followers} Seguidores</p>
                             <p className="list-group-item m-0"><i className="bi bi-heart">
-                                </i> {state.following} Seguindo</p>
+                                </i> {state?.following} Seguindo</p>
                         </div>
                         <div>
                             <p className="list-group-item m-0"><i className="bi bi-building">
@@ -78,14 +84,15 @@ function Profile() {
                                 </i> {state.location ? state.location : "Não Informado"}</p>
                             <p className="list-group-item m-0"><i className="bi bi-envelope">
                                 </i> {state.email ? state.email : "Não Informado"}</p>
-                            <p className="list-group-item m-0"><i className="bi bi-link-45deg">
-                                </i> {state.blog ? state.blog : "Não Informado"}</p>
-                            <p className="list-group-item m-0"><i className="bi bi-twitter">
-                                </i> {state.twitter_username ? state.twitter_username : "Não Informado"}</p>
+                            <a onClick={() => {openInNewTab(state?.blog)}} className="list-group-item m-0 site"><i className="bi bi-link-45deg">
+                                </i> {state.blog ? state.blog : "Não Informado"}</a>
+                            <a href={state.twitter_username ? "https://twitter.com/" + state.twitter_username : state?.twitter_username}
+                             className="list-group-item m-0"><i className="bi bi-twitter">
+                                </i> {state.twitter_username ? state.twitter_username : "Não Informado"}</a>
                         </div>
                     </div>
                 </div>
-                <button className="col-md-2 col-sm-2 col-2 btn">Contato</button>
+                <button onClick={() => {openInNewTab(state?.blog)}} className="col-md-2 col-sm-2 col-2 btn">Contato</button>
             </div>
             <div className="col-8">
                 { repositories.map(function(item) {
@@ -93,7 +100,7 @@ function Profile() {
                     <div className="card-body">
                         <a href={item?.html_url}><h5 className="card-title">{item?.name}</h5></a>
                         <p className="card-text text-muted">{item?.description}</p>
-                        <p className="card-text timed text-muted"><i class="bi bi-star"> </i>{item?.stargazers_count} • atualizado {getRelativeTime(new Date(item?.updated_at.split("T")[0]).getTime())}</p>
+                        <p className="card-text timed text-muted"><i className="bi bi-star"> </i>{item?.stargazers_count} • atualizado {getRelativeTime(new Date(item?.updated_at.split("T")[0]).getTime())}</p>
                     </div>
                 </div>
                 })
