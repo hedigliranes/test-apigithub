@@ -1,0 +1,64 @@
+.profile .logo h1{
+    font-size: 32px;
+    padding-left: 112px;
+}
+
+.profile nav {
+    margin-bottom: 50px;
+}
+
+.profile .logo {
+    position: absolute;
+    width: fit-content;
+}
+
+.profile .row {
+    width: 100%;
+}
+
+.profile #search-addon-profile {
+    background-color: #fff;
+    border-color: #8C19D2;
+}
+
+.profile .form-control:focus {
+    box-shadow: none !important;
+    border-color: #8C19D2 !important;
+}
+
+.profile .form-control {
+    border-color: #8C19D2;
+    border-left: #fff !important;
+}
+
+.profile .input-group {
+    width: 30%;
+}
+
+.profile .card {
+    margin: 0px 0 10px 0;
+}
+
+.profile .card-profile {
+    margin-left: 112px;
+}
+
+.profile .follows {
+    margin-bottom: 27px;
+}
+
+.profile img {
+    border-radius: 50%;
+}
+
+.profile .btn {
+    background-color: #8C19D2 !important;
+    color: #fff !important;
+    border-radius: 6px !important;
+    width: 75%;
+    margin-left: 112px;
+  }
+
+.profile .timed {
+    font-size: 14px;
+}

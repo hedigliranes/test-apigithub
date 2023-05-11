@@ -26,7 +26,7 @@
   left: 320px;
 }
 
-.input-group {
+.App .input-group {
   padding: 56px 270px;
 
   @media screen and (max-width:1000px) {
@@ -34,7 +34,7 @@
   }
 }
 
-.form-control {
+.App .form-control {
   border-left: #fff !important;
 
   @media screen and (max-width:580px) {
@@ -43,12 +43,12 @@
   }
 }
 
-.form-control:focus {
+.App .form-control:focus {
   box-shadow: none !important;
   border-color: #dee2e6 !important;
 }
 
-.btn {
+.App .btn {
   background-color: #8C19D2 !important;
   color: #fff !important;
   margin-left: 32px !important;
@@ -60,10 +60,10 @@
   }
 }
 
-.input-group-text {
+.App .input-group-text {
   height: 48px;
 }
 
-#basic-addon1 {
+.App #basic-addon1 {
   background-color: #fff;
 }
