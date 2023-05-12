@@ -22,6 +22,8 @@ Referências úteis:
 
 ## Requisitos
 
+Foi escolhido o Boostrap para a estilização da aplicação por ser uma das bibliotecas mais famosas do mercado, de modo que a maioria das pessoas terá facilidade entender o que foi feito usando essa biblioteca.
+
 Certifique-se de ter as seguintes versões instaladas:
 
 - Node.js: v16.8.0
