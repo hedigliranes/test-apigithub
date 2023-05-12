@@ -60,6 +60,10 @@
   }
 }
 
+.App .alert {
+  text-align: center;
+}
+
 .App .input-group-text {
   height: 48px;
 }
