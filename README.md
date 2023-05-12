@@ -24,10 +24,10 @@ Referências úteis:
 
 Foi escolhido o Bootstrap para a estilização da aplicação por ser uma das bibliotecas mais famosas do mercado, de modo que a maioria das pessoas terá facilidade em entender o que foi feito usando essa biblioteca.
 
-Certifique-se de ter as seguintes versões instaladas:
+As seguintes versões foram usadas:
 
 - Node.js: v16.8.0
-- React.js
+- React.js: v18.2.0
 - Bootstrap: v5.0
 
 ## Configuração do Ambiente
