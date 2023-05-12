@@ -26,7 +26,7 @@ Foi escolhido o Bootstrap para a estilização da aplicação por ser uma das bi
 
 As seguintes versões foram usadas:
 
-- Node.js: v16.8.0
+- Node.js: v16.18.0
 - React.js: v18.2.0
 - Bootstrap: v5.0
 
@@ -55,13 +55,13 @@ npm install
 3.1. Caso a sua versão do Node seja diferente use:
 
 ```bash
-nvm install v18.2.0
+nvm install v16.18.0
 ```
 
 3.2. Depois altere a versão em uso com:
 
 ```bash
-nvm use v18.2.0
+nvm use v16.18.0
 ```
 
 4. Inicie o servidor de desenvolvimento.
