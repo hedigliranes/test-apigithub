@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# Resumo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto tem como objetivo a construção de uma aplicação React que busca o perfil de desenvolvedores na API pública do GitHub e exibe seus dados em uma página de perfil. As histórias de usuário incluem:
 
-## Available Scripts
+- Na página inicial, os usuários devem poder pesquisar por um nome de usuário do GitHub e ter os dados do usuário exibidos corretamente na página de perfil.
 
-In the project directory, you can run:
+- Os repositórios na página de perfil devem ser ordenados de acordo com o número de estrelas, do maior para o menor.
 
-### `npm start`
+- Os nomes dos repositórios devem ser links que redirecionam para os respectivos repositórios no GitHub.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Se o usuário pesquisado tiver um site ou uma conta no Twitter em seu perfil, deve haver botões que, ao serem clicados, abram o site ou a conta no Twitter, respectivamente.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- O botão de voltar deve levar o usuário de volta à página inicial, permitindo que outro usuário do GitHub seja pesquisado.
 
-### `npm test`
+Referências úteis:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- API de busca de usuários do GitHub: [https://api.github.com/users/username](https://api.github.com/users/username)
 
-### `npm run build`
+- API de busca de repositórios do usuário pesquisado: [https://api.github.com/users/username/repos](https://api.github.com/users/username/repos)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Documentação oficial do GitHub: [https://docs.github.com/en/rest](https://docs.github.com/en/rest)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Requisitos
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Certifique-se de ter as seguintes versões instaladas:
 
-### `npm run eject`
+- Node.js: v16.8.0
+- React.js
+- Bootstrap: v5.0
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Configuração do Ambiente
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Para executar este projeto, siga as etapas abaixo:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone este repositório para sua máquina local.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+git clone https://github.com/hedigliranes/test-apigithub.git
+```
 
-## Learn More
+2. Navegue até o diretório do projeto.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+cd test-apigithub
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Instale as dependências do Node.js.
 
-### Code Splitting
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Inicie o servidor de desenvolvimento.
 
-### Analyzing the Bundle Size
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Isso iniciará o aplicativo em modo de desenvolvimento. Abra [http://localhost:3000](http://localhost:3000) no seu navegador para visualizá-lo.
 
-### Making a Progressive Web App
+5. Build a aplicação para deploy.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm run build
+```
 
-### Advanced Configuration
+## Estrutura do Projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+O projeto segue a estrutura padrão do React.js, com os seguintes diretórios e arquivos principais:
 
-### Deployment
+```
+test-apigithub/
+  public/
+    index.html
+    favicon.ico
+  src/
+    pages/
+        home/
+            Home.css
+            Home.js
+        profile/
+            Profile.css
+            Profile.js
+        Routes.js
+    index.css
+    index.js
+    ...
+  package.json
+  README.md
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- A pasta `public` contém o arquivo HTML principal e outros recursos estáticos.
+- A pasta `src` contém os componentes React.js, estilos e os arquivos principais do aplicativo.
+- O arquivo `index.js` é o ponto de entrada do aplicativo React.js.
 
-### `npm run build` fails to minify
+## Recursos Adicionais
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Para criar componentes React.js, consulte a documentação oficial do React: [React.js Documentation](https://reactjs.org/docs/getting-started.html).
+- Para estilizar o aplicativo usando Bootstrap, consulte a documentação oficial do Bootstrap: [Bootstrap Documentation](https://getbootstrap.com/docs/5.0/getting-started/introduction/).
+
+## Contribuição
+
+Se você quiser contribuir para este projeto, fique à vontade para fazer um fork e enviar suas solicitações pull. Será um prazer contar com a sua colaboração!
