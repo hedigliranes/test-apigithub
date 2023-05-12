@@ -52,6 +52,18 @@ cd test-apigithub
 npm install
 ```
 
+3.1. Caso a sua versão do Node seja diferente use:
+
+```bash
+nvm install v18.2.0
+```
+
+3.2. Depois altere a versão em uso com:
+
+```bash
+nvm use v18.2.0
+```
+
 4. Inicie o servidor de desenvolvimento.
 
 ```bash
