@@ -66,3 +66,12 @@
 .profile .site {
     cursor: pointer;
 }
+
+.profile .card .title {
+    text-decoration: none;
+    color: black;
+}
+
+.profile .card .card-title {
+    font-weight: 700;
+}

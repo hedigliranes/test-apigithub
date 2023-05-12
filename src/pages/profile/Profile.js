@@ -81,14 +81,14 @@ function Profile() {
                                 </div>
                             </div>
                         </div>
-                        <p className="card-text">{state.bio}</p>
-                        <div className='follows'>
+                        <p className="card-text text-muted">{state.bio}</p>
+                        <div className='follows text-muted  '>
                             <p className="list-group-item m-0"><i className="bi bi-people">
                                 </i> {state?.followers} Seguidores</p>
                             <p className="list-group-item m-0"><i className="bi bi-heart">
                                 </i> {state?.following} Seguindo</p>
                         </div>
-                        <div>
+                        <div className='text-muted'>
                             <p className="list-group-item m-0"><i className="bi bi-building">
                                 </i> {state.company ? state.company : "Não Informado" }</p>
                             <p className="list-group-item m-0"><i className="bi bi-geo-alt">
@@ -109,7 +109,7 @@ function Profile() {
                 { repositories.map(function(item) {
                     return <div className="card">
                     <div className="card-body">
-                        <a href={item?.html_url}><h5 className="card-title">{item?.name}</h5></a>
+                        <a className='title' href={item?.html_url}><h5 className="card-title">{item?.name}</h5></a>
                         <p className="card-text text-muted">{item?.description}</p>
                         <p className="card-text timed text-muted"><i className="bi bi-star"> </i>{item?.stargazers_count} • atualizado {getRelativeTime(new Date(item?.updated_at.split("T")[0]).getTime())}</p>
                     </div>
